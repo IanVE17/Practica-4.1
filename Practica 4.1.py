@@ -16,6 +16,4 @@ targets = ["box101", "box102", "box103", "box104", "box105", "box106", "box107"]
 for i in range(0, 7):
     source = d.find_element(By.ID, sources[i])
     target = d.find_element(By.ID, targets[i])
-    actions = ActionChains(d)
-    actions.drag_and_drop(source, target)
-    actions.perform()
+    ActionChains(d).drag_and_drop(source, target).perform()
